@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:groceries_app_ui/Config/Colors.dart';
 import 'package:groceries_app_ui/Screens/Splash/splashbody.dart';
 import '../../Config/assets.dart';
-import '../WelcomeScreen.dart';
+import '../Welcome/WelcomeScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 10),
+      Duration(seconds:3),
           () => Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => WelcomeScreen()),

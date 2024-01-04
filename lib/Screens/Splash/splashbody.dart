@@ -49,6 +49,7 @@ class _SplashBodyState extends State<SplashBody> {
                         Text(
 AppStrings.appTitle,
                           style:  h2height18,
+
                         ),
                       ],
                     )
