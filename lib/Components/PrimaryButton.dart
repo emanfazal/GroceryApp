@@ -28,15 +28,15 @@ class PrimaryButton extends StatelessWidget {
         decoration: BoxDecoration(
         color:AppColors.primaryColor,
         borderRadius: const BorderRadius.all(
-        Radius.circular(50.0),
+        Radius.circular(15.0),
     )),
     child: Material(
     color: Colors.transparent,
     borderRadius: const BorderRadius.all(
-    Radius.circular(50.0)),
+    Radius.circular(15.0)),
     child: InkWell(
     borderRadius: const BorderRadius.all(
-    Radius.circular(50.0),
+    Radius.circular(15.0),
     ),
       onTap: () {
         press();

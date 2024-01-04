@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groceries_app_ui/Auth/SignIn.dart';
+import 'package:groceries_app_ui/Auth/SignIns/SignIn.dart';
 import 'package:groceries_app_ui/Components/PrimaryButton.dart';
 import 'package:groceries_app_ui/Screens/Welcome/welcomebody.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -26,7 +26,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(Images.bgwelcomescreen),
+            image: AssetImage(Images.bgwelcomescreen,),
             fit: BoxFit.fill,
           ),
         ),

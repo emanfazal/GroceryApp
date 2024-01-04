@@ -5,6 +5,7 @@ class Images{
   static const String logoText="$ImagPath/textlogo.png";
   static const String logo="$ImagPath/logo.png";
   static const String bgwelcomescreen="$ImagPath/bgwelcomescreen.png";
+  static const String pic1="$ImagPath/TopSignIn.png";
 
 
 
