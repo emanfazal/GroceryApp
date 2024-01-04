@@ -65,7 +65,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       child: PrimaryButton(text: AppStrings.getStarted,
                         textStyle: h1size16,
                         press: () {
-                          SignIn(context);
+                          NavigateTo(context);
                         },
 
 
@@ -85,7 +85,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     ));
   }
 }
- SignIn(BuildContext context) {
+NavigateTo(BuildContext context) {
   Navigator.push(
     context,
     MaterialPageRoute(builder: (context) => SignInScreen()),
