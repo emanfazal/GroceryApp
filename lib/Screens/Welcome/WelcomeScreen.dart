@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:groceries_app_ui/Auth/SignIn.dart';
+import 'package:groceries_app_ui/Components/PrimaryButton.dart';
 import 'package:groceries_app_ui/Screens/Welcome/welcomebody.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -34,7 +36,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           children: [
             Container(
               child: Padding(
-                padding: EdgeInsets.only(top:150),
+                padding: EdgeInsets.only(top:300),
                 child: Column(
 
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -55,8 +57,22 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
                     Text(AppStrings.welcomecontent,
                         style:h1size16,
+                    ),
+                    SizedBox(
+                      height:20 ,
+                    ),
+                    Center(
+                      child: PrimaryButton(text: AppStrings.getStarted,
+                        textStyle: h1size16,
+                        press: () {
+                          SignIn(context);
+                        },
+
+
+
+                      ),
                     )
-                    ,
+
 
                   ],
 
@@ -68,4 +84,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       ),
     ));
   }
+}
+ SignIn(BuildContext context) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SignInScreen()),
+  );
 }
