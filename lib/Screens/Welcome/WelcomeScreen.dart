@@ -56,14 +56,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       height: 5,
                     ),
                     Text(AppStrings.welcomecontent,
-                        style:h1size16,
+                        style:h2size16,
                     ),
                     SizedBox(
                       height:20 ,
                     ),
                     Center(
                       child: PrimaryButton(text: AppStrings.getStarted,
-                        textStyle: h1size16,
+                        textStyle: h2size16,
                         press: () {
                           NavigateTo(context);
                         },

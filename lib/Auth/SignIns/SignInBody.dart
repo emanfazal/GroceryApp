@@ -1,5 +1,14 @@
-import 'package:flutter/material.dart';
 
+
+import 'package:flutter/material.dart';
+import 'package:groceries_app_ui/Auth/EnterNumber.dart';
+import 'package:groceries_app_ui/Auth/LoginWithEmail.dart';
+import 'package:groceries_app_ui/Components/CountryCodePicker.dart';
+import 'package:groceries_app_ui/Components/SocialMediaButtons.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+
+import '../../Config/Colors.dart';
+import '../../Config/TextStyle.dart';
 import '../../Config/assets.dart';
 import '../../Config/strings.dart';
 class SigninBody extends StatefulWidget {
@@ -22,7 +31,7 @@ body: Column(
    Flexible(
     child: Container(
 
-      height: 200,
+      height: 250,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(Images.pic1),
@@ -31,16 +40,57 @@ body: Column(
       ),
     ),
     ),
-
+SizedBox(
+  height: 10,
+),
     Padding(
-      padding: const EdgeInsets.only(),
-      child: Text(
-      AppStrings.getyourgroceries,
-        // style: ,
+      padding: const EdgeInsets.only(left: 20,right:20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+          AppStrings.getyourgroceries,
+            style: h1size26,
+          ),
+          CountryCode(),
+          SizedBox(height: 10,),
+          Center(
+            child: Text(
+              AppStrings.connect,
+              style: h3size14,
+            ),
+          ),
+ SizedBox(height: 50,),
+ Center(
+   child: Center(
+     child: Column(
+       children: [
+         SocialButtons(text: AppStrings.EmailLogin, textStyle: h2size18, color: AppColors.EmailButtonColor, iconpath:Images.GoogleIcon, press: () {
+                    Navigate(context);
+                  },),
+         SizedBox(height: 10,),
+         SocialButtons(text: AppStrings.FacebookLogin, textStyle: h2size18, color: AppColors.FacebookButtonColor, iconpath:Images.FacebookIcon, press: () {
+         },),
+
+       ],
+     ),
+   ),
+ )
+        ],
       ),
-    )
+    ),
+
+
   ],
 ),
+
     );
   }
+}
+Navigate(BuildContext context){
+
+  Navigator.push(
+    context ,
+    MaterialPageRoute(builder: (context) =>LoginWithNumber()),
+  );
 }

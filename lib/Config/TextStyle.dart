@@ -18,7 +18,7 @@ const h1size48=TextStyle(
     fontWeight: FontWeight.w200
 
 );
-const h1size16=TextStyle(
+const h2size16=TextStyle(
 
 fontStyle: FontStyle.italic,
     color: AppColors.Whiteheading,
@@ -26,5 +26,35 @@ fontStyle: FontStyle.italic,
     height: 1,
     fontFamily: 'NunitoSans',
    fontWeight: FontWeight.normal
+
+);
+const h3size14=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Grey,
+    fontSize: 14,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h1size26=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 26,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h2size18=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Whiteheading,
+    fontSize: 18,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
 
 );
