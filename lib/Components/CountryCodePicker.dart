@@ -1,35 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:groceries_app_ui/Auth/EnterNumber.dart';
+import 'package:country_code_picker/country_code_picker.dart';
+import 'package:groceries_app_ui/Auth/LoginthroughNumber/EnterNumber.dart';
 import 'package:groceries_app_ui/Config/Colors.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 
-class CountryCode extends StatelessWidget {
-  const CountryCode({Key? key});
+class CountryCodePickerScreen extends StatelessWidget {
+  const CountryCodePickerScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  IntlPhoneField(
-      decoration: InputDecoration(
-        labelText: '',
-        border: UnderlineInputBorder(),
-        suffixIcon: IconButton(
-          icon: Icon(Icons.arrow_forward, color: AppColors.primaryColor),
-          onPressed: () {
-
-            Navigator.push(
-              context ,
-              MaterialPageRoute(builder: (context) =>LoginWithNumber()),
-            );
-          },
-          color: Colors.blue,
-
+    return Container(
+      width: 500,
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            color: Colors.grey,
+            width: 1.0,
+          ),
         ),
       ),
-      initialCountryCode: 'BD',
-      onChanged: (phone) {
-        print(phone.completeNumber);
-      },
-      controller: TextEditingController(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: CountryCodePicker(
+              onChanged: (countryCode) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginWithNumber(),
+                  ),
+                );
+              },
+              initialSelection: 'BD',
+              favorite: ['US', 'IN'],
+              showCountryOnly: true,
+              showOnlyCountryWhenClosed: false,
+              alignLeft: false,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

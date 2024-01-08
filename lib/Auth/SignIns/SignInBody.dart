@@ -1,12 +1,13 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:groceries_app_ui/Auth/EnterNumber.dart';
+import 'package:groceries_app_ui/Auth/LoginthroughNumber/EnterNumber.dart';
 import 'package:groceries_app_ui/Auth/LoginWithEmail.dart';
-import 'package:groceries_app_ui/Components/CountryCodePicker.dart';
+import 'package:groceries_app_ui/Components/CountryCodewithnumber.dart';
 import 'package:groceries_app_ui/Components/SocialMediaButtons.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
+import '../../Components/CountryCodePicker.dart';
 import '../../Config/Colors.dart';
 import '../../Config/TextStyle.dart';
 import '../../Config/assets.dart';
@@ -52,7 +53,8 @@ SizedBox(
           AppStrings.getyourgroceries,
             style: h1size26,
           ),
-          CountryCode(),
+          // CountryCode(),
+          CountryCodePickerScreen(),
           SizedBox(height: 10,),
           Center(
             child: Text(

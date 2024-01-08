@@ -7,5 +7,6 @@ static const Color Blackheading=Color(0xFF030303);
 static const Color Grey=Color(0xFF828282);
 static const Color EmailButtonColor=Color(0xFF5383EC);
 static const Color FacebookButtonColor=Color(0xFF4A66AC);
-
+static const Color PinkGradient=Color(0xFFFCE6FF);
+static const Color GreenGradient=Color(0xFFDEF9E6);
 }
