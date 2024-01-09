@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:groceries_app_ui/Auth/Verification.dart';
+import 'package:groceries_app_ui/Auth/VerificationwithCodeScreen/Verification.dart';
 import 'package:groceries_app_ui/Components/FAB.dart';
 
 import '../../Components/CountryCodewithnumber.dart';
-import '../../Components/DialPad.dart';
 import '../../Config/TextStyle.dart';
 import '../../Config/strings.dart';
 class ScreenComponents extends StatefulWidget {
-  const ScreenComponents({super.key});
+  const ScreenComponents({super.key, });
 
   @override
   State<ScreenComponents> createState() => _ScreenComponentsState();

@@ -9,9 +9,12 @@ class Images{
   static const String pic1="$ImagPath/TopSignIn.png";
 static const String GoogleIcon="$ImagPath/Googleicon.png";
 static const String FacebookIcon="$ImagPath/Facebookicon.png";
+  static const String Seleclocation="$ImagPath/selectlocation.png";
+static const String login="$ImagPath/login.png";
 
 }
 class AppIcons{
   static const String Google="$SvgPath/Google.svg";
+  static const String dropdownicon="$SvgPath/dropdownicon.svg";
 }
 

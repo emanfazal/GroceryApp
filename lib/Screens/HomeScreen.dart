@@ -1,30 +1,18 @@
-// import 'package:flutter/material.dart';
-// class extends StatefulWidget {
-//   const ({super.key});
-//
-//   @override
-//   State<> createState() => _State();
-// }
-//
-// class _State extends State<> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Placeholder();
-//   }
-// }
+import 'package:flutter/material.dart';
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
-// return Scaffold(
-// backgroundColor: AppColors.primaryColor,
-// body: Center(
-// child:Column(
-// crossAxisAlignment: CrossAxisAlignment.center,
-// mainAxisAlignment: MainAxisAlignment.center,
-// children: [
-// // Image.asset(Images.Image1,
-// //   height: 68.61,
-// //   width: 267.42,
-// // )
-// ],
-// ),
-// ) ,
-// );
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+
+      ),
+    );
+  }
+}

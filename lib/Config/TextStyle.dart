@@ -68,3 +68,23 @@ const h2size18=TextStyle(
     fontWeight: FontWeight.normal
 
 );
+const h2size18green=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.primaryColor,
+    fontSize: 18,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h3size16grey=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Grey,
+    fontSize: 16,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);

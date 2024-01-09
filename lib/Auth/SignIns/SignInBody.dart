@@ -53,10 +53,12 @@ SizedBox(
           AppStrings.getyourgroceries,
             style: h1size26,
           ),
-          // CountryCode(),
+          // ountryCode(),
+          SizedBox(height: 20,),
           CountryCodePickerScreen(),
-          SizedBox(height: 10,),
+          SizedBox(height: 50,),
           Center(
+
             child: Text(
               AppStrings.connect,
               style: h3size14,
@@ -68,7 +70,7 @@ SizedBox(
      child: Column(
        children: [
          SocialButtons(text: AppStrings.EmailLogin, textStyle: h2size18, color: AppColors.EmailButtonColor, iconpath:Images.GoogleIcon, press: () {
-                    Navigate(context);
+                  GotoEmailScreen(context);
                   },),
          SizedBox(height: 10,),
          SocialButtons(text: AppStrings.FacebookLogin, textStyle: h2size18, color: AppColors.FacebookButtonColor, iconpath:Images.FacebookIcon, press: () {
@@ -94,5 +96,11 @@ Navigate(BuildContext context){
   Navigator.push(
     context ,
     MaterialPageRoute(builder: (context) =>LoginWithNumber()),
-  );
-}
+  );}
+  GotoEmailScreen(BuildContext context){
+    Navigator.push(
+      context ,
+      MaterialPageRoute(builder: (context) =>LoginWithEmail()),
+    );
+  }
+

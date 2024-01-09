@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app_ui/Auth/LoginthroughNumber/Components.dart';
-import 'package:groceries_app_ui/Components/DialPad.dart';
 import 'package:groceries_app_ui/Components/GradientContainer.dart';
 import 'package:groceries_app_ui/Config/Colors.dart';
 
 import '../../Config/strings.dart';
 class LoginWithNumber extends StatefulWidget {
-  const LoginWithNumber({super.key});
+
+  const LoginWithNumber({super.key, });
 
   @override
+
   State<LoginWithNumber> createState() => _LoginWithNumberState();
 }
 

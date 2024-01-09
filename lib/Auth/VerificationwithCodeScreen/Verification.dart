@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app_ui/Auth/LoginthroughNumber/Components.dart';
-import 'package:groceries_app_ui/Components/DialPad.dart';
+import 'package:groceries_app_ui/Auth/VerificationwithCodeScreen/VerificationComponents.dart';
 import 'package:groceries_app_ui/Components/GradientContainer.dart';
 import 'package:groceries_app_ui/Config/Colors.dart';
 
-import '../Config/strings.dart';
+import '../../Config/strings.dart';
 class VerifywithCode extends StatefulWidget {
   const VerifywithCode({super.key});
 
@@ -32,8 +32,8 @@ class _VerifywithCodeState extends State<VerifywithCode> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 30),
-                // child: ScreenComponents(),
+                padding: const EdgeInsets.only(left: 30,top: 10),
+               child: VerificationCodeComponents(),
               ),
 
 
