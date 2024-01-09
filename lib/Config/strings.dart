@@ -14,7 +14,7 @@ class AppStrings {
   static const String Code="Code";
   static const String ResendCode="Resend Code";
   static const String SelectLocation="Select Your Location";
-  static const String Content="Switch on your location to stay in tune with\n      what’s happening in your area";
+  static const String Content="Switch on your location to stay in tune        with what’s happening in your area";
   static const String YourZone="Your Zone";
   static const String YourArea="Your Area";
   static const String Loging="Loging";

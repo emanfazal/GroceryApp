@@ -37,8 +37,8 @@ class _CityAreaPickState extends State<CityAreaPick> {
             ),
             child: DropdownButton<String>(
               icon: SvgPicture.asset('Assets/icons/dropdownicon.svg',
-                height: 30,
-                width: 30,
+                height: 10,
+                width: 10,
                 color: AppColors.primaryColor,
               ),
               value: selectedZone,
@@ -52,7 +52,8 @@ class _CityAreaPickState extends State<CityAreaPick> {
               items: [
                 DropdownMenuItem(
 
-                  child: Text('Select Zone',style: h3size16grey,),
+                  child: Text('Select Zone                                                ',style: h3size16grey,),
+
                   value: null,
                 ),
                 ...zones.map((String zone) {
@@ -74,12 +75,12 @@ class _CityAreaPickState extends State<CityAreaPick> {
             ),
             child: DropdownButton<String>(
               icon: SvgPicture.asset(AppIcons.dropdownicon,
-              height: 30,
-              width: 30,
+              height: 10,
+              width: 10,
                 color: AppColors.primaryColor,
               ),
               value: selectedArea,
-              hint: Text('Types of Your Area                                                             ',style: h3size16grey,),
+              hint: Text('Types of Your Area                                     ',style: h3size16grey,),
               onChanged: (String? newValue) {
                 setState(() {
                   selectedArea = newValue;

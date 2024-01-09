@@ -35,6 +35,7 @@ body: Expanded(
       ),
       SizedBox(height: 10,),
       ComponentsLocationScreen(),
+      SizedBox(height: 40,),
       Flexible(child: CityAreaPick()),
       SizedBox(height: 10,),
 Flexible(
