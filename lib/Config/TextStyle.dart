@@ -88,3 +88,33 @@ const h3size16grey=TextStyle(
     fontWeight: FontWeight.normal
 
 );
+const h2size16green=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.primaryColor,
+    fontSize: 16,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h2size14green=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.primaryColor,
+    fontSize: 14,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h3size14black=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 14,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);

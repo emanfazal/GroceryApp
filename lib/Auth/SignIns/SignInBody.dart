@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:groceries_app_ui/Auth/LoginthroughNumber/EnterNumber.dart';
-import 'package:groceries_app_ui/Auth/LoginWithEmail.dart';
+import 'package:groceries_app_ui/Auth/EmailLogin/LoginWithEmail.dart';
 import 'package:groceries_app_ui/Components/CountryCodewithnumber.dart';
 import 'package:groceries_app_ui/Components/SocialMediaButtons.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
