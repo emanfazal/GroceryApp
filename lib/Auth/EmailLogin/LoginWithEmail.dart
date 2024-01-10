@@ -16,17 +16,18 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-      body: Expanded(
-      child: Column(
-      children: [
-        TopGradientContainer(imagepath: Images.login),
-        SizedBox(height: 10,),
-        Align(alignment: Alignment.topLeft,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 27),
-              child: LoginBody(),
-            )),
-      ]
-    ))));
+      body: SingleChildScrollView(
+        child: Column(
+        children: [
+          TopGradientContainer(imagepath: Images.login),
+          SizedBox(height: 10,),
+          Align(alignment: Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 27),
+                child: LoginBody(),
+              )),
+        ]
+            ),
+      )));
   }
 }

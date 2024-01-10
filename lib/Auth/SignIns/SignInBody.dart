@@ -29,18 +29,16 @@ body: Column(
     //
 
 
-   Flexible(
-    child: Container(
+   Container(
 
-      height: 250,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(Images.pic1),
-          fit: BoxFit.fill,
-        ),
-      ),
-    ),
-    ),
+     height: 250,
+     decoration: BoxDecoration(
+       image: DecorationImage(
+         image: AssetImage(Images.pic1),
+         fit: BoxFit.fill,
+       ),
+     ),
+   ),
 SizedBox(
   height: 10,
 ),
