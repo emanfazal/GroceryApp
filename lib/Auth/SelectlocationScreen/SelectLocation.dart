@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app_ui/Components/PrimaryButton.dart';
 import 'package:groceries_app_ui/Config/strings.dart';
-import 'package:groceries_app_ui/Screens/HomeScreen.dart';
+import 'package:groceries_app_ui/Screens/HomeScreen/HomeScreen.dart';
 
 import '../../Components/TopGradientImageContainer.dart';
 import '../../Config/Colors.dart';

@@ -118,3 +118,33 @@ const h3size14black=TextStyle(
     fontWeight: FontWeight.normal
 
 );
+const h2size18black=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 18,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h4size8green=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.primaryColor,
+    fontSize: 12,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h4size8black=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 12,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);

@@ -25,4 +25,10 @@ class AppStrings {
   static const String Password = "Password";
   static const String ForgotPassword = "Forgot Password?";
   static const String Login = "Login";
+  static const String SignUp="Sign Up";
+  static const String Credentials="Enter your credentials to continue";
+  static const String Username="Username";
+  static const String Terms="By continuing you agree to our Terms of Service and Privacy Policy.";
+  static const String Location="Dhaka, Banassre";
+
 }

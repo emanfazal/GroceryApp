@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:groceries_app_ui/Auth/SignUpWithEmail.dart';
+import 'package:groceries_app_ui/Auth/SignupScreen/SignUpWithEmail.dart';
 import 'package:groceries_app_ui/Components/PrimaryButton.dart';
 import '../../Config/Colors.dart';
 import '../../Config/TextStyle.dart';
 import '../../Config/strings.dart';
-import '../../Screens/HomeScreen.dart';
+import '../../Screens/HomeScreen/HomeScreen.dart';
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});
 
@@ -46,7 +46,8 @@ class _SignInFormState extends State<SignInForm> {
   }
 
   Widget build(BuildContext context) {
-    return Column(children:[InkWell(
+    return Column(children:[
+      InkWell(
       onTap: (){
         AppColors.GreenGradient;
         FocusScope.of(context).requestFocus(FocusNode());
@@ -148,30 +149,49 @@ class _SignInFormState extends State<SignInForm> {
         },),
       ),
       SizedBox(height: 20,),
-      Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 10),
-          child: RichText(
-            text: TextSpan(
-          text: 'Don\'t have an account?',
-          style: h3size14black,
-          children: <TextSpan>[
-            TextSpan(text: ' Sign up',
-                style:h2size14green ,
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
+      Container(
+        width: MediaQuery.of(context).size.width,
 
-      Navigator.push(context,MaterialPageRoute(builder:(context) =>Signup()));
-                  }
-            )
-          ]
+        height: 200,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              AppColors.PinkGradient,
+              AppColors.GreenGradient,
+              AppColors.PinkGradient,
+              AppColors.Whiteheading,
+            ],
+            stops: [0.0, 0.3, 0.6, 1.0],
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+          ),
+        ),
+        child: Column(
+
+          // mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+            child: RichText(
+              text: TextSpan(
+            text: 'Don\'t have an account?',
+            style: h3size14black,
+            children: <TextSpan>[
+              TextSpan(text: ' Sign up',
+                  style:h2size14green ,
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+
+        Navigator.push(context,MaterialPageRoute(builder:(context) =>Signup()));
+                    }
+              )
+            ]
+              ),
             ),
-          ),
-          ),
-        ],
+            ),
+          ],
+        ),
       )
 
     ],);

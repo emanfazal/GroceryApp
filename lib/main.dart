@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groceries_app_ui/Auth/SignUpWithEmail.dart';
+import 'package:groceries_app_ui/Auth/SignupScreen/SignUpWithEmail.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'package:groceries_app_ui/Screens/Splash/SplashScreen.dart';
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body:SplashScreen() ,
+
       ),
     );
   }
