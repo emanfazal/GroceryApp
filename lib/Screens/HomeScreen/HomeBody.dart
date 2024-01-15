@@ -112,6 +112,16 @@ SizedBox(height: 10,),
     // itemCount: data.length,
     // itemBuilder: (context, index) {
     // return CustomCard(data[index]);})
+        Container(
+          height: 200,  // Adjust the height as needed
+          child: ListView.builder(
+            itemCount: data.length,
+            itemBuilder: (context, index) {
+              return CustomCard(data[index]);
+            },
+          ),
+        )
+
       ],
     );
   }
