@@ -14,6 +14,12 @@ class Images {
   static const String login = "$ImagPath/login.png";
   static const String bannerImage="$ImagPath/Imageofbanner.PNG";
   static const String Bottom1="$ImagPath/bottom1.png";
+  static const String Bottom2="$ImagPath/bottom2.png";
+  static const String Bottom3="$ImagPath/Bottom3.png";
+  static const String Bottom4="$ImagPath/bottom4.png";
+  static const String Bottom5="$ImagPath/bottom5.png";
+  static const String ItemA="$ImagPath/carditem1.png";
+  static const String ItemB="$ImagPath/carditem2.png";
 }
 
 class AppIcons {

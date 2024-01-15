@@ -4,6 +4,11 @@ import '../../Components/Banners.dart';
 import '../../Config/Colors.dart';
 import '../../Config/TextStyle.dart';
 import '../../Config/strings.dart';
+import 'package:flutter/material.dart';
+import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
+
+import '../../Models/CardList.dart';
+import '../../Models/CustomCards.dart';
 
 class HomescreenBody extends StatefulWidget {
   const HomescreenBody({Key? key}) : super(key: key);
@@ -13,7 +18,14 @@ class HomescreenBody extends StatefulWidget {
 }
 
 class _HomescreenBodyState extends State<HomescreenBody> {
+  late int selectedPage;
+late final PageController _pageController;
   @override
+  void initState() {
+
+
+    super.initState();
+  }
   Widget build(BuildContext context){
     return Column(
 
@@ -77,19 +89,31 @@ class _HomescreenBodyState extends State<HomescreenBody> {
             ),
           ),
         ),
+SizedBox(height: 10,),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+            child: BannerWithPageView()),
+        SizedBox(height: 10,),
 
-        // Container(
-        //   height: 240,
-        //   child: PageView(
-        //     children: [
-        //       buildBanner(),
-        //       buildBanner(),
-        //       buildBanner(),
-        //
-        //     ],
-        //   ),
-        // ),
+        Padding(
+         padding: EdgeInsets.symmetric(horizontal: 20),
+
+         child: Row(
+           children: [
+             Text(AppStrings.Offer,style: h1size24,),
+             SizedBox(width: 75,),
+             InkWell(
+               onTap: (){},
+                 child: Text(AppStrings.Seeall,style: h2size16green,))
+           ],
+         ),
+       ),
+    // ListView.builder(
+    // itemCount: data.length,
+    // itemBuilder: (context, index) {
+    // return CustomCard(data[index]);})
       ],
     );
   }
 }
+

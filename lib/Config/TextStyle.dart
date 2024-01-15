@@ -132,7 +132,7 @@ const h4size8green=TextStyle(
 
     fontStyle: FontStyle.italic,
     color: AppColors.primaryColor,
-    fontSize: 12,
+    fontSize: 14,
     height: 1,
     fontFamily: 'NunitoSans',
     fontWeight: FontWeight.normal
@@ -143,6 +143,35 @@ const h4size8black=TextStyle(
     fontStyle: FontStyle.italic,
     color: AppColors.Blackheading,
     fontSize: 12,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const bannertextAlconica20=TextStyle(
+  fontFamily: 'Aclonica',
+  fontSize: 16,
+
+  color: AppColors.Blackheading,
+
+
+
+);
+const h1size24=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 24,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+const h2size16black=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 16,
     height: 1,
     fontFamily: 'NunitoSans',
     fontWeight: FontWeight.normal

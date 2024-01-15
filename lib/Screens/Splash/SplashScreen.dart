@@ -19,11 +19,12 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
       Duration(seconds:3),
-          () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => WelcomeScreen()),
-      ),
-    );
+    () => Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => WelcomeScreen()),
+          (Route<dynamic> route) => false,
+    ));
+
   }
 
   @override

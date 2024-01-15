@@ -30,5 +30,14 @@ class AppStrings {
   static const String Username="Username";
   static const String Terms="By continuing you agree to our Terms of Service and Privacy Policy.";
   static const String Location="Dhaka, Banassre";
+  static const String FreshVeg="Fresh Vegetables";
+  static const String Discount="Get Up To 40% OFF";
+  static const String Offer="Exclusive Offer";
+  static const String Seeall="See all";
+  static const String Item1="Oraganic Bananas";
+  static const String Item2="Red Apple";
+  static const String Item3="Item 3";
+  static const String Itemdetail="1kg, Priceg";
+  static const String Price="\$4.99";
 
 }

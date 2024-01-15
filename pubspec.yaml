@@ -42,6 +42,7 @@ dependencies:
   keyboard_actions: ^4.2.0
   csc_picker: ^0.2.7
   country_state_city_pro: ^0.0.6
+  page_view_dot_indicator: ^2.3.0
 
 
 dev_dependencies:
@@ -97,9 +98,10 @@ flutter:
          - asset: Assets/fonts/NunitoSans_Italic.ttf
 
 
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+
+     - family: Aclonica
+       fonts:
+         - asset: Assets/fonts/Aclonica-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
