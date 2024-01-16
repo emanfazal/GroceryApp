@@ -23,67 +23,69 @@ class _SigninBodyState extends State<SigninBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-body: Column(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    //
-
-
-   Container(
-
-     height: 250,
-     decoration: BoxDecoration(
-       image: DecorationImage(
-         image: AssetImage(Images.pic1),
-         fit: BoxFit.fill,
+body: SingleChildScrollView(
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      //
+  
+  
+     Container(
+  
+       height: 250,
+       decoration: BoxDecoration(
+         image: DecorationImage(
+           image: AssetImage(Images.pic1),
+           fit: BoxFit.fill,
+         ),
        ),
      ),
-   ),
-SizedBox(
-  height: 10,
-),
-    Padding(
-      padding: const EdgeInsets.only(left: 20,right:20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-          AppStrings.getyourgroceries,
-            style: h1size26,
-          ),
-          // ountryCode(),
-          SizedBox(height: 20,),
-          CountryCodePickerScreen(),
-          SizedBox(height: 50,),
-          Center(
-
-            child: Text(
-              AppStrings.connect,
-              style: h3size14,
+  SizedBox(
+    height: 10,
+  ),
+      Padding(
+        padding: const EdgeInsets.only(left: 20,right:20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+            AppStrings.getyourgroceries,
+              style: h1size26,
             ),
-          ),
- SizedBox(height: 50,),
- Center(
-   child: Center(
-     child: Column(
-       children: [
-         SocialButtons(text: AppStrings.EmailLogin, textStyle: h2size18, color: AppColors.EmailButtonColor, iconpath:Images.GoogleIcon, press: () {
-                  GotoEmailScreen(context);
-                  },),
-         SizedBox(height: 10,),
-         SocialButtons(text: AppStrings.FacebookLogin, textStyle: h2size18, color: AppColors.FacebookButtonColor, iconpath:Images.FacebookIcon, press: () {
-         },),
-
-       ],
+            // ountryCode(),
+            SizedBox(height: 20,),
+            CountryCodePickerScreen(),
+            SizedBox(height: 50,),
+            Center(
+  
+              child: Text(
+                AppStrings.connect,
+                style: h3size14,
+              ),
+            ),
+   SizedBox(height: 50,),
+   Center(
+     child: Center(
+       child: Column(
+         children: [
+           SocialButtons(text: AppStrings.EmailLogin, textStyle: h2size18, color: AppColors.EmailButtonColor, iconpath:Images.GoogleIcon, press: () {
+                    GotoEmailScreen(context);
+                    },),
+           SizedBox(height: 10,),
+           SocialButtons(text: AppStrings.FacebookLogin, textStyle: h2size18, color: AppColors.FacebookButtonColor, iconpath:Images.FacebookIcon, press: () {
+           },),
+  
+         ],
+       ),
      ),
-   ),
- )
-        ],
+   )
+          ],
+        ),
       ),
-    ),
-
-
-  ],
+  
+  
+    ],
+  ),
 ),
 
     );

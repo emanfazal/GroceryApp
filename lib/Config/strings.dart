@@ -36,8 +36,15 @@ class AppStrings {
   static const String Seeall="See all";
   static const String Item1="Oraganic Bananas";
   static const String Item2="Red Apple";
-  static const String Item3="Item 3";
+  static const String Item3="Bell Pepper Red";
+  static const String Item4="Ginger";
   static const String Itemdetail="1kg, Priceg";
   static const String Price="\$4.99";
+  static const String BestSelling="Best Selling";
+  static const String Groceries="Groceries";
+  static const String Pulses="Pulses";
+  static const String Rice="Rice";
+  static const String Item5="Beef Bone";
+  static const String Item6="Broiler Chicken";
 
 }

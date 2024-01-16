@@ -10,4 +10,6 @@ static const Color FacebookButtonColor=Color(0xFF4A66AC);
 static const Color PinkGradient=Color(0xFFFCE6FF);
 static const Color GreenGradient=Color(0xFFDEF9E6);
 static const Color darkGrey=Color(0xFFC4C4C4);
+static const Color DarkOrange= Color(0xFFFCECC9);
+static const Color SoftBlue=Color(0xFFB7DFF5);
 }

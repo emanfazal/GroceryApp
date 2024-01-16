@@ -20,6 +20,12 @@ class Images {
   static const String Bottom5="$ImagPath/bottom5.png";
   static const String ItemA="$ImagPath/carditem1.png";
   static const String ItemB="$ImagPath/carditem2.png";
+  static const String ItemC="$ImagPath/carditem3.png";
+  static const String ItemD="$ImagPath/carditem4.png";
+  static const String ItemE="$ImagPath/carditem7.png";
+  static const String ItemF="$ImagPath/carditem8.png";
+  static const String ItemG="$ImagPath/carditem5.png";
+  static const String ItemH="$ImagPath/carditem6.png";
 }
 
 class AppIcons {
