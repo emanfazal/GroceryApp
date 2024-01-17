@@ -26,9 +26,23 @@ class Images {
   static const String ItemF="$ImagPath/carditem8.png";
   static const String ItemG="$ImagPath/carditem5.png";
   static const String ItemH="$ImagPath/carditem6.png";
+  static const String ItemI ="$ImagPath/carditemE1.png";
+  static const String ItemJ="$ImagPath/carditemE2.png";
+  static const String ItemK ="$ImagPath/carditemE3.png";
+  static const String ItemL ="$ImagPath/carditemE4.png";
+  static const String ItemM ="$ImagPath/carditemE5.png";
+  static const String ItemN ="$ImagPath/carditemE6.png";
+  static const String ItemO="$ImagPath/beverages1.png";
+  static const String ItemP="$ImagPath/beverages2.png";
+  static const String ItemQ="$ImagPath/beverages3.png";
+  static const String ItemR="$ImagPath/beverages4.png";
+  static const String ItemS="$ImagPath/beverages5.png";
+  static const String ItemT="$ImagPath/beverages6.png";
 }
 
 class AppIcons {
+  static const String Upload="$SvgPath/Share.svg";
   static const String Google = "$SvgPath/Google.svg";
   static const String dropdownicon = "$SvgPath/dropdownicon.svg";
+  static const String FilterIcon="$SvgPath/filtericon.svg";
 }

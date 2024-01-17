@@ -46,5 +46,19 @@ class AppStrings {
   static const String Rice="Rice";
   static const String Item5="Beef Bone";
   static const String Item6="Broiler Chicken";
+  static const String Itemdetails="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+static const String FindProducts="Find Products";
+static const ItemEx1="Fresh Fruits & Vegetable";
+static const ItemEx2="Cooking Oil & Ghee";
+static const ItemEx3="Meat & Fish";
+static const ItemEx4="Bakery & Snacks";
+static const ItemEx5="Dairy & Eggs";
+static const ItemEx6="Beverages";
+static const Bev1="Diet Coke";
+static const Bev2="Sprite Can";
+static const Bev3="Pepsi Can";
+static const Bev4="Orange Juice";
+static const Bev5="Apple & Grape Juice";
+static const Bev6="Coca Cola Can";
 
 }

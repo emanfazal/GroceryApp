@@ -3,6 +3,7 @@ import 'package:groceries_app_ui/Screens/HomeScreen/HomeBody.dart';
 
 import '../../Config/TextStyle.dart';
 import '../../Config/assets.dart';
+import '../../Products/ExploreScreen/Explore.dart';
 
 
 
@@ -16,11 +17,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int myIndex = 0;
+  final List<Widget> _screens = [
+    HomescreenBody(),
+    Explore(),
+
+  ];
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.black,
         selectedLabelStyle: h4size8green,
@@ -42,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
+
               AssetImage(Images.Bottom2),
               color: myIndex == 1 ? Colors.green : Colors.black,
               size: 20,
@@ -86,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        child: HomescreenBody(),
+        child:  _screens[myIndex],
       ),
     );
   }

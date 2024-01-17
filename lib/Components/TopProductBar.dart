@@ -1,31 +1,81 @@
 import 'package:flutter/material.dart';
+import 'package:groceries_app_ui/Screens/HomeScreen/HomeScreen.dart';
+import 'package:flutter_svg/svg.dart';
+import '../Config/Colors.dart';
+import '../Config/assets.dart';
+final PageController _pageController = PageController();
 
 class Products extends StatelessWidget {
   final String imagePath;
-
-  const Products({required this.imagePath});
+final String itemname;
+final String detail;
+  final int selectedPage;
+  const Products({required this.imagePath,required this.itemname,required this.detail,required this.selectedPage});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20.0),
-          bottomRight: Radius.circular(20.0),
-        ),
-      ),
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        // color: Colors.black12,
-        child: Column(
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.arrow_back_ios),
-            Image.asset(imagePath),
+            Row(
+              children: [
+                InkWell(
+                    splashColor: AppColors.primaryColor,
+                    hoverColor: AppColors.primaryColor,
+                    onTap: (){
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                },
+                    child: Icon(Icons.arrow_back_ios,color: AppColors.Blackheading,weight: 150,)),
+                SizedBox(width: 320,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Align(
+                      alignment: Alignment.topRight,
+                      child: InkWell(
+                        splashColor: AppColors.primaryColor,
+                        hoverColor: AppColors.primaryColor,
+                        onTap: (){
+
+                        },
+
+                          child: SvgPicture.asset(AppIcons.Upload,width: 34,height: 34,))),
+                )
+              ],
+
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Image.asset(imagePath,width: 329,height: 129,),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 75),
+              child: Align(
+                 alignment: Alignment.bottomCenter,
+                  child: buildPageIndicator(selectedPage)),
+            ),
           ],
         ),
-      ),
     );
   }
 }
+Widget buildPageIndicator(int selectedPage) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: List.generate(3, (index) {
+      return Container(
+        width: 5,
+        height: 5,
+        margin: EdgeInsets.symmetric(horizontal: 5),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: selectedPage == index ? AppColors.primaryColor: AppColors.Grey,
+        ),
+      );
+    }),
+  );
+}
+

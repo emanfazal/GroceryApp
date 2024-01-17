@@ -18,6 +18,7 @@ class CustomCard extends StatelessWidget {
        Navigator.push(context, MaterialPageRoute(builder: (context) => ProductDetails(
          itemName: item.title,
          imagePath: item.imageUrl,
+         detail: item.detail,
        )));
      },
       child: Card(
@@ -38,13 +39,9 @@ class CustomCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 50),
               child: Center(child: Align(
                   alignment: Alignment.topCenter,
-                  child: Image.asset(item.imageUrl,height: 99,width:79))),
+                  child: Image.asset(item.imageUrl,))),
             ),
-            // ListTile(
-            //   title: Text(item.title,style: h2size16black,),
-            //   subtitle: Text(item.description,style: h3size14grey,),
-            //
-            // ),
+
             SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(left: 20),
