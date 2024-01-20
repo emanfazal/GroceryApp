@@ -7,6 +7,8 @@ import '../../Models/CardList.dart';
 import '../../Models/CustomCards.dart';
 import '../../Models/ExploreCards.dart';
 import '../../Models/ExploreModel.dart';
+import '../../Models/Exploredetailcards.dart';
+
 class ExploreDetails extends StatefulWidget {
   const ExploreDetails({required this.itemName});
   final itemName;
@@ -23,16 +25,15 @@ class _ExploreDetailsState extends State<ExploreDetails> {
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.only(top: 30,left: 20),
               child: Row(
                 children: [
                   InkWell(
                     onTap: () {},
                     child: Icon(Icons.arrow_back_ios),
                   ),
-                  SizedBox(width: 30),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 100),
+                  SizedBox(width: 10),
+                  Expanded(
                     child: Center(
                       child: Text(
                         widget.itemName,
@@ -40,30 +41,52 @@ class _ExploreDetailsState extends State<ExploreDetails> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 100),
+                  SizedBox(width: 10),
                   Padding(
-                    padding: const EdgeInsets.only(left: 60),
+                    padding: const EdgeInsets.only(right: 20),
                     child: SvgPicture.asset(AppIcons.FilterIcon),
                   ),
                 ],
               ),
             ),
             Expanded(
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 2,
-                  mainAxisSpacing: 10.0,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: getCrossAxisCount(context),
+                      crossAxisSpacing: 2,
+                      mainAxisSpacing: 10.0,
+                    ),
+                    itemCount: Exploreitemlist.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                          height:150,
+                          child: ExploredetailCard(Exploreitemlist[index]));
+                    },
+                  ),
                 ),
-                itemCount: Exploreitemlist.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return CustomCard(Exploreitemlist[index]);
-                },
               ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  int getCrossAxisCount(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    // Adjust these values based on your design and testing on Tecno Spark 6 Go
+    if (screenWidth <= 360) {
+      return 2;
+    } else if (screenWidth <= 720) {
+      return 3;
+    } else {
+      return 4;
+    }
   }
 }

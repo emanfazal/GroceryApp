@@ -8,14 +8,19 @@ class CardButton extends StatelessWidget {
   // final Function press;
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
-        child: Icon(Icons.add,color: AppColors.Whiteheading,),
-        backgroundColor: AppColors.primaryColor,
-        shape:RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0),
-        ),
-        onPressed:(){
-          // press();
-        });
+    return Container(
+      width: 50,
+      height: 50
+      ,
+      child: FloatingActionButton(
+          child: Icon(Icons.add,color: AppColors.Whiteheading,),
+          backgroundColor: AppColors.primaryColor,
+          shape:RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+          onPressed:(){
+            // press();
+          }),
+    );
   }
 }

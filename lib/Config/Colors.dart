@@ -16,4 +16,8 @@ static const Color coralColor = Color(0xFFF7A593);
 static const Color lavenderBlushColor = Color(0xFFD3B0E0);
 static const Color paleGoldColor = Color(0xFFFDE598);
 static const Color lightSkyBlueColor = Color(0xFFB7DFF5);
+static const Color white = Color(0xFFEBEBEB);
+static const Color greytext=Color(0xFF7C7C7C);
+static const Color white2=Color( 0xFFF2F3F2);
+static const Color greenbutton=Color(0xFF489E67);
 }

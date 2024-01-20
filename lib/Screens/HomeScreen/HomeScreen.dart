@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:groceries_app_ui/Products/CartScreen/Cart.dart';
 import 'package:groceries_app_ui/Screens/HomeScreen/HomeBody.dart';
+import 'package:groceries_app_ui/Screens/ProfileScreen/ProfileScreen.dart';
 
 import '../../Config/TextStyle.dart';
 import '../../Config/assets.dart';
 import '../../Products/ExploreScreen/Explore.dart';
+import '../../Products/FavoriteScreen/Favorites.dart';
 
 
 
@@ -20,6 +23,9 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = [
     HomescreenBody(),
     Explore(),
+    CartScreen(),
+    FavoriteScreen(),
+    ProfileScreen(),
 
   ];
 

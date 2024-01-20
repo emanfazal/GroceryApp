@@ -17,29 +17,48 @@ class _VerifywithCodeState extends State<VerifywithCode> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children:[
-              GradientContainer(
-                text: AppStrings.EnterCode,
-                leading: IconButton(
+          body: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  AppColors.PinkGradient,
+                  AppColors.GreenGradient,
 
-                  icon: Icon(Icons.arrow_back_ios),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
+                  AppColors.Whiteheading,
+                  AppColors.Whiteheading,
+                  AppColors.PinkGradient,
+                  // AppColors.Whiteheading,
+                  AppColors.GreenGradient,
+
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children:[
+                GradientContainer(
+                  text: AppStrings.EnterCode,
+                  leading: IconButton(
+
+                    icon: Icon(Icons.arrow_back_ios),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 30,top: 10),
-               child: VerificationCodeComponents(),
-              ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30,top: 10),
+                 child: VerificationCodeComponents(),
+                ),
 
 
 
 
-            ],
+              ],
+            ),
           )
       ),
     );

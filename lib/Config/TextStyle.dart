@@ -217,3 +217,44 @@ const h2size20black=TextStyle(
     fontWeight: FontWeight.normal
 
 );
+//black24
+const h2size24black=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 24,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+//grey9
+const h4size9grey=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.greytext,
+    fontSize: 9,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+//black28
+const h2size28black=TextStyle(
+
+    fontStyle: FontStyle.italic,
+    color: AppColors.Blackheading,
+    fontSize: 28,
+    height: 1,
+    fontFamily: 'NunitoSans',
+    fontWeight: FontWeight.normal
+
+);
+//white12
+const h2height12white = TextStyle(
+  color: AppColors.Whiteheading,
+  fontSize: 12,
+  height: 1,
+  fontFamily: 'NunitoSans',
+  // fontFamily:
+);

@@ -5,6 +5,7 @@ import 'package:groceries_app_ui/Products/ProductDetails.dart';
 import '../Config/Colors.dart';
 import '../Config/TextStyle.dart';
 import '../Config/strings.dart';
+import '../Order/AcceptedScreen.dart';
 import 'CardList.dart';
 class CustomCard extends StatelessWidget {
   final CardItem item;
@@ -20,6 +21,7 @@ class CustomCard extends StatelessWidget {
          imagePath: item.imageUrl,
          detail: item.detail,
        )));
+       // Navigator.push(context, MaterialPageRoute(builder: (context)=>AcceptedScreen()));
      },
       child: Card(
 
@@ -76,6 +78,7 @@ class CustomCard extends StatelessWidget {
           ],
         ),
       ),
+      
     );
   }
 }

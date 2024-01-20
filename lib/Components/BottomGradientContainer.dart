@@ -15,19 +15,19 @@ class _BottomGradientContainerState extends State<BottomGradientContainer> {
     return Container(
       height: 200,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppColors.PinkGradient,
-            AppColors.GreenGradient,
-            AppColors.PinkGradient,
-            AppColors.Whiteheading,
-          ],
-          stops: [0.0, 0.3, 0.6, 1.0],
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-        ),
-      ),
+      // decoration: BoxDecoration(
+      //   gradient: LinearGradient(
+      //     colors: [
+      //       AppColors.PinkGradient,
+      //       AppColors.GreenGradient,
+      //       AppColors.PinkGradient,
+      //       AppColors.Whiteheading,
+      //     ],
+      //     stops: [0.0, 0.3, 0.6, 1.0],
+      //     begin: Alignment.topRight,
+      //     end: Alignment.bottomLeft,
+      //   ),
+      // ),
 
       child: Column(
         children: [

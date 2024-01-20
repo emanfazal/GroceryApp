@@ -33,5 +33,7 @@ final List<CardItem>Exploreitemlist=[
   CardItem(AppStrings.Bev4,AppStrings.Itemdetail,Images.ItemR,AppStrings.Itemdetails),
   CardItem(AppStrings.Bev5,AppStrings.Itemdetail,Images.ItemS,AppStrings.Itemdetails),
   CardItem(AppStrings.Bev6,AppStrings.Itemdetail,Images.ItemT,AppStrings.Itemdetails),
+CardItem(AppStrings.Bev5,AppStrings.Itemdetail,Images.ItemS,AppStrings.Itemdetails),
+  CardItem(AppStrings.Bev6,AppStrings.Itemdetail,Images.ItemT,AppStrings.Itemdetails),
 
 ];

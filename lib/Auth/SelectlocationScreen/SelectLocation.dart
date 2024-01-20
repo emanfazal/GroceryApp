@@ -21,57 +21,77 @@ class _SelectLocationState extends State<SelectLocation> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-body: Expanded(
-  child: Column(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      GradientImageContainer(imagepath: Images.Seleclocation,
-      leading: IconButton(
-  
-        icon: Icon(Icons.arrow_back_ios),
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-      ),
-  
-      ),
-      SizedBox(height: 10,),
-      ComponentsLocationScreen(),
-      SizedBox(height: 40,),
-      Flexible(child: CityAreaPick()),
-      // SizedBox(height: 15,),
-Flexible(
-  child: Flexible(
-    child: Container(
-     height: 200,
-    width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppColors.PinkGradient,
-            AppColors.GreenGradient,
-            AppColors.PinkGradient,
-            AppColors.Whiteheading,
-          ],
-          stops: [0.0, 0.3, 0.6, 1.0],
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-        ),
-      ),
+body: Container(
+  decoration: BoxDecoration(
+    gradient: LinearGradient(
+      colors: [
+        AppColors.PinkGradient,
+        AppColors.GreenGradient,
 
-      child: Column(
-        children: [
-          SizedBox(height: 20,),
-          PrimaryButton(text: AppStrings.Submit, textStyle: h2size18, press: (){
-            NavigatetoHome(context);
-          },),
-        ],
+        AppColors.Whiteheading,
+        AppColors.Whiteheading,
+        AppColors.Whiteheading,
+        AppColors.PinkGradient,
+        // AppColors.Whiteheading,
+        AppColors.GreenGradient,
+
+      ],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    ),
+  ),
+  child: Expanded(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        GradientImageContainer(imagepath: Images.Seleclocation,
+        leading: IconButton(
+
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+
+        ),
+        SizedBox(height: 10,),
+        ComponentsLocationScreen(),
+        SizedBox(height: 40,),
+        Flexible(child: CityAreaPick()),
+        // SizedBox(height: 15,),
+  Flexible(
+    child: Flexible(
+      child: Container(
+       height: 200,
+      width: MediaQuery.of(context).size.width,
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [
+        //       AppColors.PinkGradient,
+        //       AppColors.GreenGradient,
+        //       AppColors.PinkGradient,
+        //       AppColors.Whiteheading,
+        //     ],
+        //     stops: [0.0, 0.3, 0.6, 1.0],
+        //     begin: Alignment.topRight,
+        //     end: Alignment.bottomLeft,
+        //   ),
+        // ),
+
+        child: Column(
+          children: [
+            SizedBox(height: 20,),
+            PrimaryButton(text: AppStrings.Submit, textStyle: h2size18, press: (){
+              NavigatetoHome(context);
+            },),
+          ],
+        ),
       ),
     ),
   ),
-),
-  
-    ],
+
+      ],
+    ),
   ),
 ),
       ),

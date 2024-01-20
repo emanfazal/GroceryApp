@@ -23,19 +23,19 @@ final String text;
     return Container(
 
       height: 200,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppColors.PinkGradient,
-            AppColors.GreenGradient,
-            AppColors.PinkGradient,
-            AppColors.Whiteheading,
-          ],
-          stops: [0.0, 0.3, 0.6, 1.0],
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-        ),
-      ),
+      // decoration: BoxDecoration(
+      //   gradient: LinearGradient(
+      //     colors: [
+      //       AppColors.PinkGradient,
+      //       AppColors.GreenGradient,
+      //       AppColors.PinkGradient,
+      //       AppColors.Whiteheading,
+      //     ],
+      //     stops: [0.0, 0.3, 0.6, 1.0],
+      //     begin: Alignment.topRight,
+      //     end: Alignment.bottomLeft,
+      //   ),
+      // ),
       child: Stack(
         children: [
           AppBar(

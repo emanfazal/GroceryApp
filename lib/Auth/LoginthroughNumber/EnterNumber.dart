@@ -18,29 +18,48 @@ class _LoginWithNumberState extends State<LoginWithNumber> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-         children:[
-         GradientContainer(
-           text: AppStrings.EnterMobileNo,
-           leading: IconButton(
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                AppColors.PinkGradient,
+                AppColors.GreenGradient,
 
-        icon: Icon(Icons.arrow_back_ios),
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-      ),
-         ),
-Padding(
-  padding: const EdgeInsets.only(left: 30),
-  child: ScreenComponents(),
-),
+                AppColors.Whiteheading,
+                AppColors.Whiteheading,
+                AppColors.PinkGradient,
+                // AppColors.Whiteheading,
+                AppColors.GreenGradient,
+
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+           children:[
+           GradientContainer(
+             text: AppStrings.EnterMobileNo,
+             leading: IconButton(
+
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+                ),
+           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: ScreenComponents(),
+          ),
 
 
 
 
-         ],
+           ],
+          ),
         )
       ),
     );

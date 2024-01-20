@@ -60,5 +60,20 @@ static const Bev3="Pepsi Can";
 static const Bev4="Orange Juice";
 static const Bev5="Apple & Grape Juice";
 static const Bev6="Coca Cola Can";
-
+static const ProductDetail="Product Detail";
+static const Nutritions="Nutritions";
+static const Review="Review";
+static const Basket="Add To Basket";
+static const Categories="Categories";
+static const Brand="Brand";
+static const ApplyFilter="Apply Filter";
+static const Checkout="Checkout";
+static const SelectMethod="Select Method";
+static const Delivery="Delivery";
+static const Pament="Pament";
+static const PromoCode="Promo Code";
+static const Pickdiscount="Pick discount";
+static const TotalCost="Total Cost";
+static const PlaceOrder="Place Order";
+static const OrderPlaced="Your Order has been accepted";
 }

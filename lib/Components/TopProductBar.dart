@@ -10,7 +10,10 @@ class Products extends StatelessWidget {
 final String itemname;
 final String detail;
   final int selectedPage;
-  const Products({required this.imagePath,required this.itemname,required this.detail,required this.selectedPage});
+  final Function press;
+
+  const Products({required this.imagePath,required this.itemname,required this.detail,required this.selectedPage,
+  required this.press,});
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +29,11 @@ final String detail;
                     splashColor: AppColors.primaryColor,
                     hoverColor: AppColors.primaryColor,
                     onTap: (){
-
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                      press();
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
                 },
-                    child: Icon(Icons.arrow_back_ios,color: AppColors.Blackheading,weight: 150,)),
-                SizedBox(width: 320,),
+                    child: Icon(Icons.arrow_back_ios,color: AppColors.Blackheading,weight: 220,)),
+                SizedBox(width: 220,),
                 Padding(
                   padding: const EdgeInsets.only(left: 40),
                   child: Align(
@@ -42,7 +45,7 @@ final String detail;
 
                         },
 
-                          child: SvgPicture.asset(AppIcons.Upload,width: 34,height: 34,))),
+                          child: SvgPicture.asset(AppIcons.Upload,width: 20,height: 30,))),
                 )
               ],
 

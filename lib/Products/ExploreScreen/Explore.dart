@@ -10,6 +10,6 @@ class Explore extends StatefulWidget {
 class _ExploreState extends State<Explore> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(child: ExploreBody());
+    return ExploreBody();
   }
 }

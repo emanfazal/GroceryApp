@@ -38,6 +38,9 @@ class Images {
   static const String ItemR="$ImagPath/beverages4.png";
   static const String ItemS="$ImagPath/beverages5.png";
   static const String ItemT="$ImagPath/beverages6.png";
+  static const String OrderAccepted="$ImagPath/OrderAccepted.png";
+  static const String OrderFailed="$ImagPath/image13.png";
+  static const String ProfileImage="$ImagPath/ProfileImage.png";
 }
 
 class AppIcons {
@@ -45,4 +48,6 @@ class AppIcons {
   static const String Google = "$SvgPath/Google.svg";
   static const String dropdownicon = "$SvgPath/dropdownicon.svg";
   static const String FilterIcon="$SvgPath/filtericon.svg";
+  static const String PaymentCard="$SvgPath/card.svg";
+
 }
