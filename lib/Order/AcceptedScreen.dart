@@ -28,8 +28,11 @@ class _AcceptedScreenState extends State<AcceptedScreen> {
 
                 AppColors.Whiteheading,
                 AppColors.Whiteheading,
+                AppColors.Whiteheading,
+                AppColors.Whiteheading,
                 AppColors.PinkGradient,
                 // AppColors.Whiteheading,
+                AppColors.GreenGradient,
                 AppColors.GreenGradient,
 
               ],
@@ -43,22 +46,29 @@ class _AcceptedScreenState extends State<AcceptedScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 50),
+                  padding: EdgeInsets.only(top: 90),
                   child: Center(child: Image.asset(Images.OrderAccepted)),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  AppStrings.OrderPlaced,
-                  style: h2size28black,
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 40,left: 40),
+                    child: Text(
+                      AppStrings.OrderPlaced,
+                      style: h2size28black,
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Your items has been placed and is on its way to being processed",
-                  style: h3size14grey,
+                Center(
+                  child: Text(
+                    "Your items has been placed and is on \n     its way to being processed",
+                    style: h3size14grey,
+                  ),
                 ),
                 Spacer(),
                 PrimaryButton(

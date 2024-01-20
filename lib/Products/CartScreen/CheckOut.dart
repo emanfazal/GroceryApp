@@ -8,12 +8,12 @@ import '../../Config/Colors.dart';
 import '../../Config/TextStyle.dart';
 import '../../Config/strings.dart';
 import '../../Order/AcceptedScreen.dart';
-class YourBottomSheetContent extends StatefulWidget {
+class BottomSheetContent extends StatefulWidget {
   @override
-  State<YourBottomSheetContent> createState() => _YourBottomSheetContentState();
+  State<BottomSheetContent> createState() => _BottomSheetContentState();
 }
 
-class _YourBottomSheetContentState extends State<YourBottomSheetContent> {
+class _BottomSheetContentState extends State<BottomSheetContent> {
   @override
   // bool isContainerVisible=false;
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class _YourBottomSheetContentState extends State<YourBottomSheetContent> {
                  Spacer(),
                  IconButton(
                    onPressed: () {
-                     // Navigator.push(context, MaterialPageRoute(builder: (context) => ExploreMain()));
+                     Navigator.pop(context);
 
                    },
                    icon: Icon(Icons.close),

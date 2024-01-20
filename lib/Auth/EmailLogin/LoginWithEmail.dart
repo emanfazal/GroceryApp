@@ -26,8 +26,10 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
 
               AppColors.Whiteheading,
               AppColors.Whiteheading,
+              AppColors.Whiteheading,
               AppColors.PinkGradient,
               // AppColors.Whiteheading,
+              AppColors.GreenGradient,
               AppColors.GreenGradient,
 
             ],

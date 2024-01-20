@@ -27,7 +27,7 @@ class _CartBodyState extends State<CartBody> {
           SizedBox(height: 20),
           SingleChildScrollView(
           child:Container(
-              height: 450,
+              height: 550,
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 // physics: NeverScrollableScrollPhysics(),
@@ -38,17 +38,20 @@ class _CartBodyState extends State<CartBody> {
               ),
             ),
           ),
-          SizedBox(height: 20),
-          CartButton(text: 'Go to Checkout', textStyle: h2height18, press: (){
-            showModalBottomSheet(
 
-              isScrollControlled: true,
-              context: context,
-              builder: (BuildContext context) {
-                return YourBottomSheetContent();
-              },
-            );
-          },),
+          Padding(
+            padding: const EdgeInsets.only(right: 10,left: 10),
+            child: CartButton(text: 'Go to Checkout', textStyle: h2height18, press: (){
+              showModalBottomSheet(
+
+                isScrollControlled: true,
+                context: context,
+                builder: (BuildContext context) {
+                  return BottomSheetContent();
+                },
+              );
+            },),
+          ),
           SizedBox(height: 20),
         ],
       ),

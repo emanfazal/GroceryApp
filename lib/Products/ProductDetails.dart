@@ -140,7 +140,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 child: DropDownContainers(),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20,left: 20),
+                padding: const EdgeInsets.only(top: 20,left: 20,right: 20),
                 child: PrimaryButton(text: AppStrings.Basket, textStyle:h2size18 , press:(){},),
               ),
             ],

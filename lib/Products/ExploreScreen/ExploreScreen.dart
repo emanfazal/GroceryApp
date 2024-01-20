@@ -13,7 +13,7 @@ class _ExploreMainState extends State<ExploreMain> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Explore(),
+        body: SingleChildScrollView(child: Explore()),
       ),
     );
   }

@@ -26,6 +26,7 @@ class _VerifywithCodeState extends State<VerifywithCode> {
 
                   AppColors.Whiteheading,
                   AppColors.Whiteheading,
+                  AppColors.Whiteheading,
                   AppColors.PinkGradient,
                   // AppColors.Whiteheading,
                   AppColors.GreenGradient,

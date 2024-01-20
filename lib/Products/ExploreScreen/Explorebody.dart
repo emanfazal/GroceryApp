@@ -24,102 +24,102 @@ class _ExploreBodyState extends State<ExploreBody> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Center(child: Text(AppStrings.FindProducts, style: h2size20black)),
-          ),
-          SizedBox(height: 30),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    onTap: () {
-                      setState(() {
-                        isSearchTapped = true;
-                        isFilterVisible = true;
-                      });
-                    },
-                    cursorColor: AppColors.primaryColor,
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[200],
-                      hintText: 'Search Store',
-                      prefixIcon: Icon(Icons.search),
-                      suffixIcon: isSearchTapped
-                          ? IconButton(
-                        color: AppColors.Grey,
-                        icon: Icon(Icons.cancel),
-                        onPressed: () {
-                          setState(() {
-                            isSearchTapped = false;
-                            isFilterVisible =false ;
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Center(child: Text(AppStrings.FindProducts, style: h2size20black)),
+        ),
+        SizedBox(height: 30),
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  onTap: () {
+                    setState(() {
+                      isSearchTapped = true;
+                      isFilterVisible = true;
+                    });
+                  },
+                  cursorColor: AppColors.primaryColor,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey[200],
+                    hintText: 'Search Store',
+                    prefixIcon: Icon(Icons.search),
+                    suffixIcon: isSearchTapped
+                        ? IconButton(
+                      color: AppColors.Grey,
+                      icon: Icon(Icons.cancel),
+                      onPressed: () {
+                        setState(() {
+                          isSearchTapped = false;
+                          isFilterVisible =false ;
 
 
-                          });
-                        },
-                      )
-                          : null,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                        borderSide: BorderSide.none,
-                      ),
+                        });
+                      },
+                    )
+                        : null,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      borderSide: BorderSide.none,
                     ),
-                    onChanged: (value) {
-                      print(value);
-                    },
                   ),
+                  onChanged: (value) {
+                    print(value);
+                  },
                 ),
-                SizedBox(width: 10),
-                Visibility(
-                  visible: isFilterVisible,
-                  child: IconButton(
-                    icon:SvgPicture.asset(AppIcons.FilterIcon),
-                    onPressed: () {
-                      setState(() {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) =>FilterScreen()));
-
-                      });
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          Visibility(
-            visible: isSearchTapped,
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: getCrossAxisCount(context),
-                  crossAxisSpacing: 2,
-                  mainAxisSpacing: 10.0,
-                ),
-                itemCount: Exploreitemlist.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    height: 150,
-                    child: ExploredetailCard(Exploreitemlist[index]),
-                  );
-                },
               ),
+              SizedBox(width: 10),
+              Visibility(
+                visible: isFilterVisible,
+                child: IconButton(
+                  icon:SvgPicture.asset(AppIcons.FilterIcon),
+                  onPressed: () {
+                    setState(() {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>FilterScreen()));
+
+                    });
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        Visibility(
+          visible: isSearchTapped,
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: getCrossAxisCount(context),
+                crossAxisSpacing: 2,
+                mainAxisSpacing: 10.0,
+              ),
+              itemCount: Exploreitemlist.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  height: 150,
+                  child: ExploredetailCard(Exploreitemlist[index]),
+                );
+              },
             ),
           ),
-        Visibility  (
-          visible: !isFilterVisible,
+        ),
+      Visibility  (
+        visible: !isFilterVisible,
 
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20,right: 20),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20,right: 20),
+            child: SingleChildScrollView(
               child: Container(
                 height: MediaQuery.of(context).size.height,
                 width: 450,
@@ -140,9 +140,9 @@ class _ExploreBodyState extends State<ExploreBody> {
               ),
             ),
           ),
+        ),
 
-        ],
-      ),
+      ],
     );
   }
 

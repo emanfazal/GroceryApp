@@ -126,10 +126,10 @@ class _FilterScreenState extends State<FilterScreen> {
                   }),
 
                 ),
-Spacer(),
-// SizedBox(height: 40,),
+        Spacer(),
+        // SizedBox(height: 40,),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20,left: 30),
+                  padding: const EdgeInsets.only(bottom: 20,left: 30,right: 30),
                   child: PrimaryButton(text: AppStrings.ApplyFilter, textStyle: h2size18, press: (){},),
                 ),
               ],

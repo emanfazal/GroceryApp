@@ -27,6 +27,8 @@ class _LoginWithNumberState extends State<LoginWithNumber> {
 
                 AppColors.Whiteheading,
                 AppColors.Whiteheading,
+                AppColors.Whiteheading,
+                AppColors.Whiteheading,
                 AppColors.PinkGradient,
                 // AppColors.Whiteheading,
                 AppColors.GreenGradient,

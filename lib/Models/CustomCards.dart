@@ -38,7 +38,7 @@ class CustomCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.only(left: 50,top:20),
               child: Center(child: Align(
                   alignment: Alignment.topCenter,
                   child: Image.asset(item.imageUrl,))),

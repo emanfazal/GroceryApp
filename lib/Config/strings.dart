@@ -75,5 +75,5 @@ static const PromoCode="Promo Code";
 static const Pickdiscount="Pick discount";
 static const TotalCost="Total Cost";
 static const PlaceOrder="Place Order";
-static const OrderPlaced="Your Order has been accepted";
+static const OrderPlaced="Your Order has been \n           accepted";
 }

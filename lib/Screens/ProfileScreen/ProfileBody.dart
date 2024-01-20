@@ -70,9 +70,12 @@ mainAxisAlignment: MainAxisAlignment.center,
           ),
         ),
         SizedBox(height: 10,),
-        LogoutButton(text: 'Log Out', textStyle: h2size18green, color: AppColors.white2,  press:(){
+        Padding(
+          padding: const EdgeInsets.only(right: 10,left: 10),
+          child: LogoutButton(text: 'Log Out', textStyle: h2size18green, color: AppColors.white2,  press:(){
 
-        },),
+          },),
+        ),
         // SocialButtons(text: 'Log Out', textStyle: h2size18green, color: AppColors.white2, iconpath: , press:(){},),
       ],
     );

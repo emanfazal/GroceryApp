@@ -36,7 +36,7 @@ class _FavoriteBodyState extends State<FavoriteBody> {
           SingleChildScrollView(
           child: Container(
     width: MediaQuery.of(context).size.width,
-    height: 450,
+    height: 550,
     child: ListView.builder(
     scrollDirection: Axis.vertical,
     itemCount:Exploreitemlist.length,
@@ -47,11 +47,12 @@ class _FavoriteBodyState extends State<FavoriteBody> {
     ),
                   ),
 
-          SizedBox(height: 20),
-         PrimaryButton(text: 'Add All to Cart', textStyle: h2height18, press: (){
-           _showAddAllToCartDialog(context);
-           },),
-          SizedBox(height: 20),
+         Padding(
+           padding: const EdgeInsets.only(right: 10,left: 10),
+           child: PrimaryButton(text: 'Add All to Cart', textStyle: h2height18, press: (){
+             _showAddAllToCartDialog(context);
+             },),
+         ),
         ],
       ),
     );
