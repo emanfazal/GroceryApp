@@ -16,8 +16,7 @@ class LoginWithNumber extends StatefulWidget {
 class _LoginWithNumberState extends State<LoginWithNumber> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -63,7 +62,7 @@ class _LoginWithNumberState extends State<LoginWithNumber> {
            ],
           ),
         )
-      ),
+
     );
   }
 }

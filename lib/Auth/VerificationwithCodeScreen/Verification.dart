@@ -15,8 +15,7 @@ class VerifywithCode extends StatefulWidget {
 class _VerifywithCodeState extends State<VerifywithCode> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
           body: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -61,7 +60,7 @@ class _VerifywithCodeState extends State<VerifywithCode> {
               ],
             ),
           )
-      ),
+
     );
   }
 }

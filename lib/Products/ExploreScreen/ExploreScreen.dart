@@ -11,10 +11,9 @@ class ExploreMain extends StatefulWidget {
 class _ExploreMainState extends State<ExploreMain> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         body: SingleChildScrollView(child: Explore()),
-      ),
+
     );
   }
 }

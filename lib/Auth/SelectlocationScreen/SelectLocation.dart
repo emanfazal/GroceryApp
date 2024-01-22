@@ -19,8 +19,7 @@ class SelectLocation extends StatefulWidget {
 class _SelectLocationState extends State<SelectLocation> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
 body: Container(
   decoration: BoxDecoration(
     gradient: LinearGradient(
@@ -94,7 +93,7 @@ body: Container(
     ),
   ),
 ),
-      ),
+
     );
   }
 }

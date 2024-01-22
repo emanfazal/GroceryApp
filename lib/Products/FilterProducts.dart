@@ -22,8 +22,7 @@ class _FilterScreenState extends State<FilterScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -136,7 +135,7 @@ class _FilterScreenState extends State<FilterScreen> {
             ),
           ),
         ),
-      ),
+
     );
   }
 }

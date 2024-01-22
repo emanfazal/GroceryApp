@@ -3,6 +3,8 @@ import 'package:groceries_app_ui/Auth/SignupScreen/SignUpWithEmail.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'package:groceries_app_ui/Screens/Splash/SplashScreen.dart';
+
+import 'Routes.dart';
 void main(){
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
     ScreenBreakpoints(desktop: 300, tablet: 200,watch: 50),
@@ -15,10 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body:SplashScreen() ,
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
 
-      ),
     );
   }
 }

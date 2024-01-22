@@ -42,8 +42,7 @@ class _ProductDetailsState extends State<ProductDetails> {
     });
   }
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         body: SingleChildScrollView(
           child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,7 +145,7 @@ class _ProductDetailsState extends State<ProductDetails> {
             ],
           ),
         ),
-      ),
+
     );
   }
 }

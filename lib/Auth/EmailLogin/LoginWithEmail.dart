@@ -15,8 +15,7 @@ class LoginWithEmail extends StatefulWidget {
 class _LoginWithEmailState extends State<LoginWithEmail> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+ return  Scaffold(
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -50,6 +49,6 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
           ]
               ),
         ),
-      )));
+      ));
   }
 }

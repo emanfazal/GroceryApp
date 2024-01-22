@@ -14,8 +14,7 @@ class SplashBody extends StatefulWidget {
 class _SplashBodyState extends State<SplashBody> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: AppColors.primaryColor,
 
           body: Center(
@@ -64,7 +63,7 @@ AppStrings.appTitle,
             ),
           ) ,
 
-      ),
+
     );
   }
 }

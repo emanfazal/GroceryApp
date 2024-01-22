@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:groceries_app_ui/Auth/SignupScreen/SignupBody.dart';
 
 import '../../Components/TopGradientContainer.dart';
+import '../../Config/Colors.dart';
 import '../../Config/assets.dart';
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -13,22 +14,42 @@ class Signup extends StatefulWidget {
 class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SingleChildScrollView(child: Column(
+    return  Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                AppColors.PinkGradient,
+                AppColors.GreenGradient,
 
-            children: [
-              TopGradientContainer(imagepath: Images.login),
-              SizedBox(height: 10,),
-              Align(alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 27),
-                    child: SignupBody(),
-                  )),
-            ]
+                AppColors.Whiteheading,
+                AppColors.Whiteheading,
+                AppColors.Whiteheading,
+                AppColors.PinkGradient,
+                // AppColors.Whiteheading,
+                AppColors.GreenGradient,
+                AppColors.GreenGradient,
 
-        )),
-      ),
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+          child: SingleChildScrollView(child: Column(
+
+              children: [
+                TopGradientContainer(imagepath: Images.login),
+                SizedBox(height: 10,),
+                Align(alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 27),
+                      child: SignupBody(),
+                    )),
+              ]
+
+          )),
+        ),
+
     );
   }
 }

@@ -8,6 +8,7 @@ import '../../Models/CustomCards.dart';
 import '../../Models/ExploreCards.dart';
 import '../../Models/ExploreModel.dart';
 import '../../Models/Exploredetailcards.dart';
+import '../ExploreScreen/ExploreScreen.dart';
 
 class ExploreDetails extends StatefulWidget {
   const ExploreDetails({required this.itemName});
@@ -20,8 +21,7 @@ class ExploreDetails extends StatefulWidget {
 class _ExploreDetailsState extends State<ExploreDetails> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         body: Column(
           children: [
             Padding(
@@ -29,7 +29,9 @@ class _ExploreDetailsState extends State<ExploreDetails> {
               child: Row(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>ExploreMain()));
+                    },
                     child: Icon(Icons.arrow_back_ios),
                   ),
                   SizedBox(width: 10),
@@ -73,7 +75,7 @@ class _ExploreDetailsState extends State<ExploreDetails> {
             ),
           ],
         ),
-      ),
+
     );
   }
 

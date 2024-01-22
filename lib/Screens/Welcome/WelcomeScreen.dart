@@ -19,8 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return MaterialApp(
-        home: Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
@@ -84,7 +83,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           ) ,
         ),
       ),
-    ));
+    );
   }
 }
 NavigateTo(BuildContext context) {
