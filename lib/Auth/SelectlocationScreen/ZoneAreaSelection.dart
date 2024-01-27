@@ -25,84 +25,83 @@ class _CityAreaPickState extends State<CityAreaPick> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
-      child: Expanded(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text('Your Zone',style: h3size16grey,),
-            InputDecorator(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.symmetric(horizontal: 15),
-                 // Icon size
-              ),
-              child: DropdownButton<String>(
-                icon: SvgPicture.asset('Assets/icons/dropdownicon.svg',
-                  height: 10,
-                  width: 10,
-                  color: AppColors.primaryColor,
-                ),
-                value: selectedZone,
-                hint: Text('Select Zone  ',style: h3size16grey,),
-                onChanged: (String? newValue) {
-                  setState(() {
-                    selectedZone = newValue;
-                    selectedArea = null;
-                  });
-                },
-                items: [
-                  DropdownMenuItem(
-        
-                    child: Text('Select Zone                                                ',style: h3size16grey,),
-        
-                    value: null,
-                  ),
-                  ...zones.map((String zone) {
-                    return DropdownMenuItem<String>(
-                      value: zone,
-                      child: Text(zone),
-                    );
-                  }),
-                ],
-              ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('Your Zone',style: h3size16grey,),
+          InputDecorator(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.symmetric(horizontal: 15),
+               // Icon size
             ),
-            // SizedBox(height: 10),
-            Text('Your Area',style: h3size16grey,),
-            InputDecorator(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.symmetric(horizontal: 15),
-        
-              ),
-              child: DropdownButton<String>(
-                icon: SvgPicture.asset(AppIcons.dropdownicon,
+            child: DropdownButton<String>(
+              icon: SvgPicture.asset('Assets/icons/dropdownicon.svg',
                 height: 10,
                 width: 10,
-                  color: AppColors.primaryColor,
-                ),
-                value: selectedArea,
-                hint: Text('Types of Your Area                                     ',style: h3size16grey,),
-                onChanged: (String? newValue) {
-                  setState(() {
-                    selectedArea = newValue;
-                  });
-                },
-                items: selectedZone != null && areasByZone.containsKey(selectedZone!)
-                    ? [
-                  ...areasByZone[selectedZone!]!.map((String area) {
-                    return DropdownMenuItem<String>(
-        
-                      value: area,
-                      child: Text(area),
-                    );
-                  }),
-                ]
-                    : [],
+                color: AppColors.Grey,
               ),
+              value: selectedZone,
+              hint: Text('Select Zone                                     ',style: h3size16grey,),
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedZone = newValue;
+                  selectedArea = null;
+                });
+              },
+              items: [
+                DropdownMenuItem(
+
+                  child: Text('Select Zone',style: h3size16grey,),
+
+                  value: null,
+                ),
+                ...zones.map((String zone) {
+                  return DropdownMenuItem<String>(
+                    value: zone,
+                    child: Text(zone),
+                  );
+                }),
+              ],
             ),
-          ],
-        ),
+          ),
+          // SizedBox(height: 10),
+          Text('Your Area                         ',style: h3size16grey,),
+          InputDecorator(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.symmetric(horizontal: 15),
+
+            ),
+
+            child: DropdownButton<String>(
+              icon: SvgPicture.asset(AppIcons.dropdownicon,
+              height: 10,
+              width: 10,
+                color: AppColors.Grey,
+              ),
+              value: selectedArea,
+              hint: Text('Types of Your Area                         ',style: h3size16grey,),
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedArea = newValue;
+                });
+              },
+              items: selectedZone != null && areasByZone.containsKey(selectedZone!)
+                  ? [
+                ...areasByZone[selectedZone!]!.map((String area) {
+                  return DropdownMenuItem<String>(
+
+                    value: area,
+                    child: Text(area),
+                  );
+                }),
+              ]
+                  : [],
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -105,31 +105,38 @@ late final PageController _pageController;
            child: Row(
              children: [
                Text(AppStrings.Offer,style: h1size24,),
-               SizedBox(width: 75,),
-               InkWell(
-                 onTap: (){},
-                   child: Text(AppStrings.Seeall,style: h2size16green,))
+              Spacer(),
+               Padding(
+                 padding: const EdgeInsets.only(right: 30),
+                 child: InkWell(
+                   onTap: (){},
+                     child: Text(AppStrings.Seeall,style: h2size16green,)),
+               )
              ],
            ),
          ),
+          SizedBox(height: 20,),
 
           Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 250,
-              child: SingleChildScrollView(
-                child: Container(
-                  height: 250,
-                  width: 100,
-                color: Colors.white,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: data.length,
-                    itemBuilder: (context, index) {
-                      return CustomCard(data[index]);
-                    },
-                  ),
+            padding: const EdgeInsets.only(left: 20,),
+            child: SingleChildScrollView(
+              child: Container(
+
+                height: 250,
+                width: MediaQuery.of(context).size.width,
+              // color: Colors.white,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: data.length,
+                  separatorBuilder: (context, index) => SizedBox(width: 10),
+                  itemBuilder: (context, index) {
+                    return Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: AppColors.GreyBorder),
+                        ),
+                        child: CustomCard(data[index]));
+                  },
                 ),
               ),
             ),
@@ -141,29 +148,38 @@ late final PageController _pageController;
             child: Row(
               children: [
                 Text(AppStrings.BestSelling,style: h1size24,),
-                SizedBox(width: 75,),
-                InkWell(
-                    onTap: (){},
-                    child: Text(AppStrings.Seeall,style: h2size16green,))
+               Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 30),
+                  child: InkWell(
+                      onTap: (){},
+                      child: Text(AppStrings.Seeall,style: h2size16green,)),
+                )
               ],
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 20,),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: 250,
+              height: 260,
               child: SingleChildScrollView(
                 child: Container(
                   height: 250,
                   width: 100,
                   color: Colors.white,
-                  child: ListView.builder(
+                  child: ListView.separated(
                     scrollDirection: Axis.horizontal,
+                    separatorBuilder:  (context, index) => SizedBox(width: 10),
                     itemCount: BestSellingdata.length,
                     itemBuilder: (context, index) {
-                      return CustomCard(BestSellingdata[index]);
+                      return Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: AppColors.GreyBorder),
+                          ),
+                          child: CustomCard(BestSellingdata[index]));
                     },
                   ),
                 ),
@@ -178,10 +194,13 @@ late final PageController _pageController;
             child: Row(
               children: [
                 Text(AppStrings.Groceries,style: h1size24,),
-                SizedBox(width: 75,),
-                InkWell(
-                    onTap: (){},
-                    child: Text(AppStrings.Seeall,style: h2size16green,))
+               Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 30),
+                  child: InkWell(
+                      onTap: (){},
+                      child: Text(AppStrings.Seeall,style: h2size16green,)),
+                )
               ],
             ),
           ),
@@ -203,6 +222,7 @@ late final PageController _pageController;
       ),
         ),
       ),
+          SizedBox(height: 20,),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Container(
@@ -213,10 +233,17 @@ late final PageController _pageController;
                   height: 250,
                   width: 100,
                   color: Colors.white,
-                  child: ListView.builder(
+                  child: ListView.separated(
+                    separatorBuilder:  (context, index) => SizedBox(width: 10),
+
                     scrollDirection: Axis.horizontal,
                     itemCount: listdata.length ,                  itemBuilder: (context, index) {
-                      return CustomCard(BottomList[index]);
+                      return Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15), // Same border radius as the Card widget
+                            border: Border.all(color: AppColors.GreyBorder), // Border color
+                          ),
+                          child: CustomCard(BottomList[index]));
                     },
                   ),
                 ),

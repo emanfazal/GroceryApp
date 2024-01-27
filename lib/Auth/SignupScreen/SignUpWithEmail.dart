@@ -4,8 +4,10 @@ import 'package:groceries_app_ui/Auth/SignupScreen/SignupBody.dart';
 import '../../Components/TopGradientContainer.dart';
 import '../../Config/Colors.dart';
 import '../../Config/assets.dart';
+import '../SignIns/SignIn.dart';
 class Signup extends StatefulWidget {
   const Signup({super.key});
+  static String routeName = "/Signup";
 
   @override
   State<Signup> createState() => _SignupState();
@@ -14,7 +16,13 @@ class Signup extends StatefulWidget {
 class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return WillPopScope(
+        onWillPop: () async {
+      // Navigate back to the sign-in screen
+      Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+      return true; // Prevent default back button behavior
+    },
+    child:   Scaffold(
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -22,6 +30,9 @@ class _SignupState extends State<Signup> {
                 AppColors.PinkGradient,
                 AppColors.GreenGradient,
 
+                AppColors.Whiteheading,
+                AppColors.Whiteheading,
+                AppColors.Whiteheading,
                 AppColors.Whiteheading,
                 AppColors.Whiteheading,
                 AppColors.Whiteheading,
@@ -50,6 +61,6 @@ class _SignupState extends State<Signup> {
           )),
         ),
 
-    );
+    ));
   }
 }

@@ -20,4 +20,5 @@ static const Color white = Color(0xFFEBEBEB);
 static const Color greytext=Color(0xFF7C7C7C);
 static const Color white2=Color( 0xFFF2F3F2);
 static const Color greenbutton=Color(0xFF489E67);
+static const Color GreyBorder=Color(0xFFE2E2E2);
 }

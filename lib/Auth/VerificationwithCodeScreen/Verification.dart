@@ -6,6 +6,8 @@ import 'package:groceries_app_ui/Config/Colors.dart';
 
 import '../../Config/strings.dart';
 class VerifywithCode extends StatefulWidget {
+  static String routeName = "/VerifywithCode";
+
   const VerifywithCode({super.key});
 
   @override
@@ -17,6 +19,8 @@ class _VerifywithCodeState extends State<VerifywithCode> {
   Widget build(BuildContext context) {
     return  Scaffold(
           body: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [

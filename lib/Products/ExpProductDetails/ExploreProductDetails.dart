@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../Config/Colors.dart';
 import '../../Config/TextStyle.dart';
 import '../../Config/assets.dart';
 import '../../Models/CardList.dart';
@@ -60,12 +61,16 @@ class _ExploreDetailsState extends State<ExploreDetails> {
                   child: GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: getCrossAxisCount(context),
-                      crossAxisSpacing: 2,
+                      crossAxisSpacing: 10.0,
                       mainAxisSpacing: 10.0,
                     ),
                     itemCount: Exploreitemlist.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15), // Same border radius as the Card widget
+                            border: Border.all(color: AppColors.GreyBorder), // Border color
+                          ),
                           height:150,
                           child: ExploredetailCard(Exploreitemlist[index]));
                     },

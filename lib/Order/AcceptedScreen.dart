@@ -84,8 +84,10 @@ class _AcceptedScreenState extends State<AcceptedScreen> {
                     },
                     child: InkWell(
                         onTap: (){
-                          Navigator.push(context,MaterialPageRoute(builder:(context) =>HomeScreen()));
-
+                          Navigator.pushNamed(
+                            context,
+                            HomeScreen.routeName,
+                          );
                         },
                         child: Text("Back to home", style: h2size18black,)),
                   ),

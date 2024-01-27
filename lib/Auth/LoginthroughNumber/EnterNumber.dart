@@ -5,6 +5,7 @@ import 'package:groceries_app_ui/Config/Colors.dart';
 
 import '../../Config/strings.dart';
 class LoginWithNumber extends StatefulWidget {
+  static String routeName = "/LoginWithNumber";
 
   const LoginWithNumber({super.key, });
 
@@ -18,6 +19,8 @@ class _LoginWithNumberState extends State<LoginWithNumber> {
   Widget build(BuildContext context) {
     return  Scaffold(
         body: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [

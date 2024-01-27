@@ -5,7 +5,10 @@ import 'package:groceries_app_ui/Components/TopGradientContainer.dart';
 import '../../Components/TopGradientImageContainer.dart';
 import '../../Config/Colors.dart';
 import '../../Config/assets.dart';
+import '../SignIns/SignIn.dart';
 class LoginWithEmail extends StatefulWidget {
+  static String routeName = "/LoginWithEmail";
+
   const LoginWithEmail({super.key});
 
   @override
@@ -15,7 +18,12 @@ class LoginWithEmail extends StatefulWidget {
 class _LoginWithEmailState extends State<LoginWithEmail> {
   @override
   Widget build(BuildContext context) {
- return  Scaffold(
+ return  WillPopScope(
+     onWillPop: () async {
+   Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+   return true;
+ },
+    child:  Scaffold(
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -23,6 +31,8 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
               AppColors.PinkGradient,
               AppColors.GreenGradient,
 
+              AppColors.Whiteheading,
+              AppColors.Whiteheading,
               AppColors.Whiteheading,
               AppColors.Whiteheading,
               AppColors.Whiteheading,
@@ -49,6 +59,6 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
           ]
               ),
         ),
-      ));
+      )));
   }
 }

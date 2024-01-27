@@ -93,14 +93,14 @@ body: SingleChildScrollView(
 }
 Navigate(BuildContext context){
 
-  Navigator.push(
-    context ,
-    MaterialPageRoute(builder: (context) =>LoginWithNumber()),
+  Navigator.pushNamed(
+    context,
+    LoginWithNumber.routeName,
   );}
   GotoEmailScreen(BuildContext context){
-    Navigator.push(
-      context ,
-      MaterialPageRoute(builder: (context) =>LoginWithEmail()),
+    Navigator.pushNamed(
+      context,
+      LoginWithEmail.routeName,
     );
   }
 

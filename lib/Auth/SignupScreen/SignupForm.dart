@@ -245,8 +245,14 @@ SizedBox(height: 20,),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
 
-                                Navigator.push(context,MaterialPageRoute(builder:(context) =>LoginWithEmail()));
-                              }
+    Navigator.push(
+    context,
+    MaterialPageRoute(
+    builder: (context) => LoginWithEmail(),
+    settings: RouteSettings(name: LoginWithEmail.routeName),
+    ),
+    );                    }
+
                         )
                       ]
                   ),

@@ -9,6 +9,8 @@ import '../../Config/assets.dart';
 import '../../Config/strings.dart';
 
 class WelcomeScreen extends StatefulWidget {
+  static String routeName = "/WelcomeScreen";
+
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
@@ -86,9 +88,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 }
-NavigateTo(BuildContext context) {
-  Navigator.push(
+void NavigateTo(BuildContext context) {
+  Navigator.pushNamed(
     context,
-    MaterialPageRoute(builder: (context) => SignInScreen()),
+    SignInScreen.routeName,
   );
 }

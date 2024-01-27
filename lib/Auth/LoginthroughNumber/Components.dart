@@ -42,8 +42,8 @@ Align(
 }
 Goto(BuildContext context){
 
-  Navigator.push(
-    context ,
-    MaterialPageRoute(builder: (context) =>VerifywithCode()),
+  Navigator.pushNamed(
+    context,
+    VerifywithCode.routeName,
   );
 }

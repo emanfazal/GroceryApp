@@ -10,6 +10,8 @@ import '../../Config/assets.dart';
 import 'LocationScreenComponents.dart';
 import 'ZoneAreaSelection.dart';
 class SelectLocation extends StatefulWidget {
+  static String routeName = "/SelectLocation";
+
   const SelectLocation({super.key});
 
   @override
@@ -26,7 +28,6 @@ body: Container(
       colors: [
         AppColors.PinkGradient,
         AppColors.GreenGradient,
-
         AppColors.Whiteheading,
         AppColors.Whiteheading,
         AppColors.Whiteheading,
@@ -39,56 +40,55 @@ body: Container(
       end: Alignment.bottomCenter,
     ),
   ),
-  child: Expanded(
+  child: SingleChildScrollView(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         GradientImageContainer(imagepath: Images.Seleclocation,
         leading: IconButton(
-
+    
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
-
+    
         ),
         SizedBox(height: 10,),
         ComponentsLocationScreen(),
         SizedBox(height: 40,),
-        Flexible(child: CityAreaPick()),
-        // SizedBox(height: 15,),
-  Flexible(
-    child: Flexible(
-      child: Container(
-       height: 200,
-      width: MediaQuery.of(context).size.width,
-        // decoration: BoxDecoration(
-        //   gradient: LinearGradient(
-        //     colors: [
-        //       AppColors.PinkGradient,
-        //       AppColors.GreenGradient,
-        //       AppColors.PinkGradient,
-        //       AppColors.Whiteheading,
-        //     ],
-        //     stops: [0.0, 0.3, 0.6, 1.0],
-        //     begin: Alignment.topRight,
-        //     end: Alignment.bottomLeft,
-        //   ),
-        // ),
-
-        child: Column(
-          children: [
-            SizedBox(height: 20,),
-            PrimaryButton(text: AppStrings.Submit, textStyle: h2size18, press: (){
-              NavigatetoHome(context);
-            },),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: CityAreaPick(),
         ),
-      ),
-    ),
-  ),
+        // SizedBox(height: 15,),
+      Container(
+       height: 500,
+      width: MediaQuery.of(context).size.width,
+    // decoration: BoxDecoration(
+    //   gradient: LinearGradient(
+    //     colors: [
+    //       AppColors.PinkGradient,
+    //       AppColors.GreenGradient,
+    //       AppColors.PinkGradient,
+    //       AppColors.Whiteheading,
+    //     ],
+    //     stops: [0.0, 0.3, 0.6, 1.0],
+    //     begin: Alignment.topRight,
+    //     end: Alignment.bottomLeft,
+    //   ),
+    // ),
 
+    child: Column(
+      children: [
+        SizedBox(height: 20,),
+        PrimaryButton(text: AppStrings.Submit, textStyle: h2size18, press: (){
+          NavigatetoHome(context);
+        },),
+      ],
+    ),
+      ),
+    
       ],
     ),
   ),
@@ -98,8 +98,9 @@ body: Container(
   }
 }
 NavigatetoHome(BuildContext context){
-  Navigator.push(
-    context ,
-    MaterialPageRoute(builder: (context) =>HomeScreen()),
+
+  Navigator.pushNamed(
+    context,
+    HomeScreen.routeName,
   );
 }

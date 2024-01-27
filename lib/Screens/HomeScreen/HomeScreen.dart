@@ -7,12 +7,14 @@ import '../../Config/TextStyle.dart';
 import '../../Config/assets.dart';
 import '../../Products/ExploreScreen/Explore.dart';
 import '../../Products/FavoriteScreen/Favorites.dart';
+import '../Welcome/WelcomeScreen.dart';
 
 
 
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+  static String routeName = "/HomeScreen";
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -32,7 +34,25 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+        onWillPop: () async {
+          if (myIndex != 0) {
+            setState(() {
+              myIndex = 0;
+            });
+            return false; // Prevent default back button behavior
+          } else {
+            // Navigate to the WelcomeScreen only if already on the HomeScreen
+            Navigator.of(context).pushNamedAndRemoveUntil(
+              WelcomeScreen.routeName,
+                  (route) => false,
+            );
+            return false; // Prevent default back button behavior
+          }
+          // Return true if the back button behavior should be allowed
+          return true;
+        },
+        child:Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.green,
@@ -103,6 +123,6 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child:  _screens[myIndex],
       ),
-    );
+    ));
   }
 }

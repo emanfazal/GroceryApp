@@ -30,22 +30,19 @@ final String detail;
                     hoverColor: AppColors.primaryColor,
                     onTap: (){
                       press();
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
                 },
                     child: Icon(Icons.arrow_back_ios,color: AppColors.Blackheading,weight: 220,)),
-                SizedBox(width: 220,),
+                Spacer(),
                 Padding(
-                  padding: const EdgeInsets.only(left: 40),
-                  child: Align(
-                      alignment: Alignment.topRight,
-                      child: InkWell(
-                        splashColor: AppColors.primaryColor,
-                        hoverColor: AppColors.primaryColor,
-                        onTap: (){
+                  padding: const EdgeInsets.only(right: 20),
+                  child: InkWell(
+                    splashColor: AppColors.primaryColor,
+                    hoverColor: AppColors.primaryColor,
+                    onTap: (){
 
-                        },
+                    },
 
-                          child: SvgPicture.asset(AppIcons.Upload,width: 20,height: 30,))),
+                      child: SvgPicture.asset(AppIcons.Upload,width: 20,height: 30,)),
                 )
               ],
 

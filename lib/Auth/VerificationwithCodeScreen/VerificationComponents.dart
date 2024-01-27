@@ -28,27 +28,21 @@ SizedBox(height: 30,),
 
             child: Padding(
               padding: const EdgeInsets.only(right: 20),
-              child: Flexible(
-                child: Row(
-                  children: [
-                    InkWell(child: Text(AppStrings.ResendCode,style:h2size18green,
-                
-                    ),
-                        onTap: (){}
-                    ),
-                    SizedBox(
-                      width: 100,
-                    ),
-                    Flexible(
-                      child: Align(
-                        alignment: Alignment.bottomRight,
-                        child: FloatingActionbutton(press: (){
-                          NextScreen(context);
-                        },),
-                      ),
-                    ),
-                  ],
-                ),
+              child: Row(
+                children: [
+                  InkWell(child: Text(AppStrings.ResendCode,style:h2size18green,
+
+                  ),
+                      onTap: (){}
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: FloatingActionbutton(press: (){
+                      NextScreen(context);
+                    },),
+                  ),
+                ],
               ),
             )),
 
@@ -57,8 +51,10 @@ SizedBox(height: 30,),
   }
 }
 NextScreen(BuildContext context){
-  Navigator.push(
-    context ,
-    MaterialPageRoute(builder: (context) =>SelectLocation()),
+
+  Navigator.pushNamed(
+    context,
+    SelectLocation.routeName,
   );
+
 }

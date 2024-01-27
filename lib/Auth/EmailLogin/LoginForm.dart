@@ -152,7 +152,7 @@ class _SignInFormState extends State<SignInForm> {
       Container(
         width: MediaQuery.of(context).size.width,
 
-        height: 200,
+        height: 300,
         // decoration: BoxDecoration(
         //   gradient: LinearGradient(
         //     colors: [
@@ -183,8 +183,13 @@ class _SignInFormState extends State<SignInForm> {
                   recognizer: TapGestureRecognizer()
                     ..onTap = () {
 
-        Navigator.push(context,MaterialPageRoute(builder:(context) =>Signup()));
-                    }
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Signup(),
+                          settings: RouteSettings(name: Signup.routeName),
+                        ),
+                      );                    }
               )
             ]
               ),
